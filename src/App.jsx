@@ -1,11 +1,11 @@
-import NftCard from "./react/NftCard";
+import StatsPreview from "./react/StatsPreview";
 import "./scss/main.scss";
 import "animate.css";
 
 function App() {
   return (
     <main>
-      <NftCard />
+      <StatsPreview />
     </main>
   );
 }

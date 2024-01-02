@@ -1,7 +1,10 @@
 @use "../global/config" as *;
 body {
   font-family: $ff;
-  color: $clr-neutral300;
+  font-size: 15px;
+  font-weight: $regular;
+  background-color: $clr-primary400;
+  color: $clr-neutral60;
 }
 
 button {
@@ -9,4 +12,32 @@ button {
   background: none;
   border: none;
   -webkit-tap-highlight-color: transparent;
+}
+
+article {
+  padding: 16px;
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+h1,
+h2 {
+  color: $clr-neutral100;
+  font-weight: $bold;
+}
+
+span {
+  color: $clr-primary200;
+}
+
+p {
+  line-height: 1.5;
 }
