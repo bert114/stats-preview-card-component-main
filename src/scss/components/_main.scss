@@ -1,0 +1,136 @@
+@use "../global/config" as *;
+@use "../global/fa" as *;
+
+main {
+  background-color: $clr-neutral500;
+  color: $clr-neutral100;
+  font-size: 18px;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  font-weight: $regular;
+  min-height: 100vh;
+
+  .container {
+    background-color: $clr-neutral400;
+    padding: 24px;
+    border-radius: 16px;
+    max-width: 350px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+      rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  }
+
+  picture {
+    position: relative;
+    cursor: pointer;
+
+    img {
+      border-radius: 10px;
+    }
+
+    &:hover {
+      &::before {
+        transition: 1s;
+        position: absolute;
+        inset: 0;
+        content: "";
+        background-color: $clr-primary220;
+        opacity: 0.4;
+        border-radius: 6px;
+      }
+    }
+  }
+
+  article {
+    padding-top: 30px;
+
+    > :nth-child(3) {
+      justify-content: space-between;
+      font-size: 14px;
+      margin: 2rem 0 0 0;
+
+      > :nth-child(1) {
+        color: $clr-primary220;
+        font-weight: $semi-bold;
+      }
+
+      > :nth-child(2) {
+        opacity: 0.6;
+      }
+
+      .icon {
+        margin-right: 0.5rem;
+      }
+
+      > :nth-child(1) .icon {
+        @include fa-icon-solid($fa-var-diamond);
+      }
+
+      > :nth-child(2) .icon {
+        @include fa-icon-solid($fa-var-clock);
+      }
+    }
+  }
+
+  h1 {
+    font-size: 22px;
+    font-weight: $semi-bold;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: 0.15s;
+
+    &:hover {
+      color: $clr-primary220;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 1.4;
+    opacity: 0.5;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 50px;
+    }
+  }
+  .row3 {
+    font-size: 14px;
+    gap: 1.8rem;
+    padding-top: 1.6rem;
+    margin-top: 1.8rem;
+    border-top: 1px solid $clr-neutral300;
+
+    > :nth-child(1) {
+      outline: 1px solid $clr-neutral100;
+      border-radius: 50%;
+    }
+
+    > :nth-child(2) {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    span {
+      opacity: 0.6;
+    }
+
+    img {
+      width: 30px;
+    }
+
+    .name {
+      transition: 0.15s;
+      cursor: pointer;
+    }
+
+    .name:hover {
+      color: $clr-primary220;
+    }
+  }
+}

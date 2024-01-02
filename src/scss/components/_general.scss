@@ -1,0 +1,12 @@
+@use "../global/config" as *;
+body {
+  font-family: $ff;
+  color: $clr-neutral300;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
